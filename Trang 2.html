@@ -1,74 +1,120 @@
-<html lang="vi">
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Đăng Kí Tài Khoản</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng kí</title>
     <style>
-        body {
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
             font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
+        }
+
+        .video-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; 
+            z-index: -1;
+        }
+
+        .content {
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            margin: 0;
-        }
-        h2 { font-family: sans-serif;
-            font-size: small;
-            background-color: #C0C0C0;
-            justify-content: center;
-            align-items: center;
-            height: 150px;
-            margin: 0;
-        }
-        .dangnhap {
-            background-color: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgb(0, 0, 0);
             text-align: center;
+            color: white;
         }
-        .dangnhap h1 {
-            margin-bottom: 20px;
-        }
-        .dangnhap input {
+
+        /* bảng đăng kí*/
+        .signup-form {
+            background-color: rgba(0, 0, 0, 0.7); /*nền*/
+            padding: 30px;
+            border-radius: 8px;
             width: 100%;
+            max-width: 400px; 
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+            display: flex;
+            flex-direction: column; /* stack cột boxes */
+            align-items: center; /* căn */
+        }
+
+        .signup-form h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: white;
+        }
+
+        .signup-form input,
+        .signup-form textarea {
+            width: 80%; /* căn giữa bản đk*/
             padding: 10px;
             margin: 10px 0;
-            border: 1px solid #ccc;
+            border: 2px solid #333;
             border-radius: 5px;
-        }
-        .dangnhap button {
-            background-color: #4caf50;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
             font-size: 16px;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
         }
-        .dangnhap button:hover {
+
+        .signup-form textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .signup-form input:focus,
+        .signup-form textarea:focus {
+            outline: none;
+            border-color: #4CAF50;
+        }
+
+        .signup-form button {
+            width: 80%;
+            padding: 12px;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .signup-form button:hover {
             background-color: #45a049;
         }
     </style>
 </head>
 <body>
-    <div class="dangnhap">
-        <h1>Đăng Kí Tài Khoản</h1>
-        <form action="Trang 3.html" method="GET">
-            <input type="text" placeholder="Tên người dùng">
-            <input type="gmail" placeholder="Gmail">
-            <input type="sdt" placeholder="Số Điện Thoại">
-            <input type="password" placeholder="Tạo Mật Khẩu">
-        <h2>
-            <label for="feedback"></label>
-                <textarea id = 'feedback' name="mama_textarea" rows = 7 cols = 130 placeholder="Gửi một lời chúc cho người bố của chúng tôi. Xin chân thành cảm ơn!!!!"></textarea>
-        </h2>
-            <button type="submit">Đăng Kí</button>
+
+    <!-- vid bg -->
+    <video class="video-background" autoplay loop muted>
+        <source src="images/thaybacheditngauloi.mp4" type="video/mp4">
+    </video>
+
+    <!--form -->
+    <div class="content">
+        <div class="signup-form">
+            <h2>Thông tin đăng kí</h2>
+            <form action="Trang 3.html" method="GET">
+                <input type="text" name="username" placeholder="Tên tài khoản" required>
+
+                <input type="email" name="email" placeholder="Địa chỉ Email" required>
+
+                <input type="tel" name="phone" placeholder="Số điện thoại" pattern="[0-9]{10}" title="Please enter a 10-digit phone number" required>
+
+                <input type="password" name="password" placeholder="Mật khẩu" required>
+
+                <textarea name="notes" placeholder="Gửi lời nhắn yêu thương cho Lê Bạch<3"></textarea>
+
+                <button type="submit">Đăng kí</button>
+            </form>
+        </div>
     </div>
-        </form>
-    </div>
+
 </body>
 </html>
-<body>
-    
-</body>
