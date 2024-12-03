@@ -60,18 +60,29 @@
         
         <section id="bottom_img_section">
             <img src="images/save_walter_banner.png" alt="Save Walter White banner">
-            <a href="https://www.imdb.com/title/tt0903747/"><img id="click_here_img" src="images/donate_button.png" alt="Donate Button"></a>
+            <a href="Trang 2.html">
+                <img id="click_here_img" src="images/donate_button.png" alt="Donate Button">
+            </a>
         </section>
-        
+    
         <section id="visitors_container">
             <p class="white bold">Mọi đóng góp của bạn sẽ được trân trọng và đánh giá cao.</p>
             <p class="yellow bold">Visitors so far:</p>
+            <div class="number" id="number"></div>
+
+    <script>
+        function generateRandomNumber() {
+            // Generate a random 6-digit number
+            let randomNumber = Math.floor(Math.random() * 900000) + 100000;
+            // Display the number
+            document.getElementById("number").innerHTML = randomNumber;
+        }
+
+        // Automatically generate the 6-digit number when the page is loaded
+        window.onload = generateRandomNumber;
+    </script>
         
-            <div id="visitors_counter">
-                <a href="http://www.free-stuff.me.uk/free/voucher_codes/" target="_blank">
-                <img src="http://001.c-o-u-n-t.com/count-016.pl?count=visitors-tracker&type=odmeter1&prog=hit" alt="voucher codes" title="voucher codes"></a>
-            </div>
-        
+            
         </section>
     </main>
 

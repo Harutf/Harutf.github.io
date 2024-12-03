@@ -178,9 +178,29 @@ li {
     list-style: none;
 }
 
-#copyright {
-    font-size: 12px;
-    text-align: center;
-    font-weight: bold;
+@keyframes rainbowRun {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 200% 50%;
+    }
 }
 
+#click_here_img {
+    margin: 20px auto; /* Center and add gaps */
+    display: block; /* Center horizontally */
+    padding: 10px; /* Space between content and border */
+    width: 30%; /* Keep button small */
+    border: 10px solid transparent; /* Transparent border to show the rainbow */
+    border-radius: 12px; /* Round corners slightly */
+    background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet, red); /* Rainbow gradient */
+    background-size: 200% 200%; /* Make the gradient larger for smooth animation */
+    animation: rainbowRun 1s linear infinite; /* Animate the gradient movement */
+    background-clip: padding-box; /* Ensure background stays within the border */
+    -webkit-background-clip: padding-box; /* For Safari compatibility */
+    background-origin: border-box;
+}
+#number {
+    color: white;
+}
